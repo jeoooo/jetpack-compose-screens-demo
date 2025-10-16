@@ -22,15 +22,16 @@ class MainActivity : ComponentActivity() {
             JetpackcomposescreensdemoTheme {
                 val navController = rememberNavController()
 
-                Scaffold(modifier = Modifier) { innerPadding ->
+                Scaffold(modifier = Modifier) { _ ->
                     NavHost(
                         navController = navController,
                         startDestination = "login"
                     ) {
+
+                        // define composable routes
                         composable("login") {
                             LoginScreen(
                                 onLoginClick = { navController.navigate("dashboard") },
-                                onForgotPasswordClick = { /* handle forgot password */ }
                             )
                         }
 
