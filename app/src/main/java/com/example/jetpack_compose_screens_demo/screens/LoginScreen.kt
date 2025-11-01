@@ -35,6 +35,8 @@ fun LoginScreen(
             modifier = Modifier.padding(bottom = 24.dp)
         )
 
+        Spacer(modifier = Modifier.height(80.dp))
+
         TextField(
             state = rememberTextFieldState(initialText = "email address"),
             label = { Text("Email") },
